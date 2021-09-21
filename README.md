@@ -1,5 +1,2 @@
 # six-guys.github.io
-Website for *insert name here*, a smart glasses company.
-
-Features:
-Built-in 
+Website for Eyeroh, a smart glasses company.
