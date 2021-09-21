@@ -1,2 +1,5 @@
 # six-guys.github.io
-Website for Rally Up, a program for meeting new people immediately and to alleviate boredom.
+Website for *insert name here*, a smart glasses company.
+
+Features:
+Built-in 
