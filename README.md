@@ -12,7 +12,7 @@ Mustafa Al-Sakkaf   malsadev  300214149 https://github.com/malsadev
 ----------
 Yinhui Wu           kev1nwuu  300258115 https://github.com/kev1nwuu
 -----
-Alex Maalouf bossman51234 300237277 Profile link
+Alex Maalouf bossman51234 300237277 https://github.com/Bossman51234
 ----
 
 
