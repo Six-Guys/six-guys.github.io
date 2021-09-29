@@ -4,7 +4,7 @@ Name                Username  Student # Profile links
 --------------
 Colby Todd          ColbyTodd 300241178 Profile links
 -----------
-Anthony Daher       dxher     300233710 Profile links
+Anthony Daher       dxher     300233710 https://github.com/dxher
 ----------
 Christian Paravalos Vladi1091 300231900 https://github.com/Vladi1091
 ----------
