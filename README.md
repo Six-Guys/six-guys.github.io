@@ -6,7 +6,7 @@ Colby Todd          ColbyTodd 300241178 Profile links
 -----------
 Anthony Daher       dxher     300233710 Profile links
 ----------
-Christian Paravalos Vladi1091 300231900 Profile link
+Christian Paravalos Vladi1091 300231900 https://github.com/Vladi1091
 ----------
 Mustafa Al-Sakkaf   malsadev  300214149 https://github.com/malsadev 
 ----------
