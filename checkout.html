@@ -1,22 +1,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title> Check Out </title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!--- this goes in the header, the cart button -->
     <div class="cart-button">
-        <img src="images/animated_cart.gif" alt="cart" width="50px" height="50px" align="right">
+        <img class="Sirv image-main" src="images/bag2.0.jpg">
+        <img class="Sirv image-hover" src="images/animated_cart.gif">
     </div>
+    <!--- this is what's displayed between header and footer-->
     <div class="cart">
         <!--- items in cart -->
         <div class="cart-page">
-            <table style="width: 1000px;">
+            <table>
                 <tr>
                     <th>Product</th>
                     <th>Quantity</th>
-                    <th>Subtotal</th>
                 </tr>
                 <tr>
                     <td>
@@ -29,14 +32,13 @@
                         </div>
                     </td>
                     <td><input type="number" value="1"></td>
-                    <td>400$</td>
                 </tr>
             </table>
         </div>
 
         <!-- total on the right -->
         <div class="total">
-            <table style="height: 500px;">
+            <table>
                 <tr>
                     <td>Subtotal</td>
                     <td>400$</td>
