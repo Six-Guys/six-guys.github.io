@@ -1,3 +1,8 @@
+/*---- main page----*/
+body {
+    background-color: #150D2B;
+}
+
 /*---- cart button -----*/
 
 .cart-button img.image-main{
@@ -32,10 +37,11 @@
     padding: 5px;
 }
 .cart-page table{
-    border: 3px solid #3e97d3;
+    border: 3px solid #860029;
     border-radius: 10px;
     width: 100%;
     float: left;
+    color: #fff;
 }
 .cart-info{
     display: flex;
@@ -45,7 +51,7 @@ th{
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #3e97d3;
+    background: #860029;
     font-weight: normal;
 }
 td{
@@ -60,15 +66,17 @@ td img{
     width: 150px;
     height: 150px;
     margin-right: 10px;
+    color: #fff;
 }
 
 /*------- table on the right ------*/
 .total table{
-    border: 3px solid #3e97d3;
+    border: 3px solid #860029;
     border-radius: 10px;
     width: 100%;
     max-width: 300px;
     float: right;
+    color: #fff;
 }
 *{
     box-sizing: border-box;
