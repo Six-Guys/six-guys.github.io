@@ -3,9 +3,12 @@ body {
     background-color: #10141e;
 }
 
-.cart-button:hover img.image-hover{
-    opacity: 1;
+@font-face{
+    font-family:Orbitron;
+    src: url(OrbitronMedium.ttf);
 }
+
+/*---- cart button -----*/
 
 /*------ purchase text -------*/
 
