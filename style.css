@@ -1,57 +1,68 @@
 /*---- main page----*/
 body {
-    background-color: #150D2B;
+    background-color: #10141e;
 }
 
-/*---- cart button -----*/
-
-.cart-button img.image-main{
-    position: relative;
-    float: right;
-    width: 60px;
-    height: 50px;
-    max-width: 100%;
-}
-.cart-button img.image-hover{
-    position: absolute;
-    opacity: 0;
-    top: 7;
-    right: 0;
-    left: 92.9%;
-    bottom: 0;
-    object-fit: contain;
-    transition: opacity .2s;
-    width: 60px;
-    height: 50px;
-}
 .cart-button:hover img.image-hover{
     opacity: 1;
 }
 
+/*------ purchase text -------*/
+
+h1 {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/*------ purchase button -----*/
+
+a {
+    display: flex;
+    width: 200px; 
+    margin: auto;  
+    margin-top: 20px; 
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    color: #ff015a;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #ff01b3;
+    background: #DE004E;
+    box-shadow: 0 0 10px #DE004E, 0 0 40px #DE004E, 0 0 80px #DE004E;
+}
+
 /*----- main table ----*/
 
-.cart-page {
-    margin: 50px auto;
-    float: left;
-    width: 50%;
-    padding: 5px;
-}
 .cart-page table{
-    border: 3px solid #860029;
+    border-top: 3px solid #860029;
+    border-bottom: 3px solid #860029;
     border-radius: 10px;
-    width: 100%;
+    margin-top: 50px;
+    width: 80%;
     float: left;
     color: #fff;
 }
-.cart-info{
+.cart-page{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;	
 }
-th{
+th {
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #860029;
     font-weight: normal;
 }
 td{
@@ -69,21 +80,3 @@ td img{
     color: #fff;
 }
 
-/*------- table on the right ------*/
-.total table{
-    border: 3px solid #860029;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    float: right;
-    color: #fff;
-}
-*{
-    box-sizing: border-box;
-} 
-.total {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    padding: 5px;
-}

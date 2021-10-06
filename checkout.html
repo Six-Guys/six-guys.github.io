@@ -7,53 +7,41 @@
 </head>
 
 <body>
-    <!--- this goes in the header, the cart button -->
-    <div class="cart-button">
-        <img class="Sirv image-main" src="images/bag2.0.jpg">
-        <img class="Sirv image-hover" src="images/animated_cart.gif">
-    </div>
-    <!--- this is what's displayed between header and footer-->
-    <div class="cart">
-        <!--- items in cart -->
-        <div class="cart-page">
-            <table>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cart-info">
-                            <img src="none" alt="Glasses">
-                            <div>
-                                <p>Eyeroh Glasses</p>
-                                <small>Price: 400$</small>
-                            </div>
+    <!--- this is what's displayed between header and footer -->
+
+    <!--- this is the header -->
+
+    <h1> Your cart total: 400$</h1>
+
+    <!--- this is the purchase button -->
+
+    <div class="purchase">
+        <a href="#">
+            Purchase 
+        </a>
+    </div> 
+    <!--- these are the glasses and the quantity-->
+    <div class="cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th></th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/glasses.jpg" alt="Glasses">
+                        <div>
+                            <p>Eyeroh Glasses</p>
+                            <small>Price: 400$</small>
                         </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- total on the right -->
-        <div class="total">
-            <table>
-                <tr>
-                    <td>Subtotal</td>
-                    <td>400$</td>
-                </tr>
-                <tr>
-                    <td>Tax</td>
-                    <td>52$</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>452$</td>
-                </tr>
-            </table>
-        </div>
+                    </div>
+                </td>
+                <td></td>
+                <td><input type="number" value="1"></td>
+            </tr>
+        </table>
     </div>
-
 </body>
 </html>
