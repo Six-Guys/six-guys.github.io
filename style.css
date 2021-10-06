@@ -3,6 +3,11 @@ body {
     background-color: #150D2B;
 }
 
+@font-face{
+    font-family:Orbitron;
+    src: url(OrbitronMedium.ttf);
+}
+
 /*---- cart button -----*/
 
 .cart-button img.image-main{
