@@ -1,6 +1,7 @@
 /*---- main page----*/
 body {
-    background-color: #10141e;
+    min-height: 100vh;
+    background: linear-gradient(#10141e, #2b284b);
 }
 
 @font-face{
@@ -22,26 +23,31 @@ h1 {
 
 /*------ purchase button -----*/
 
-a {
+.purchase {
     display: flex;
-    width: 200px; 
+    width: fit-content; 
     margin: auto;  
     margin-top: 20px; 
     align-items: center;
     justify-content: center;
     padding: 15px 30px;
-    color: #ff015a;
+    border-radius: 10px;
+    letter-spacing: 4px;   
+
     text-transform: uppercase;
-    letter-spacing: 4px;
     text-decoration: none;
-    overflow: hidden;
     transition: 0.2s;
+    font-family: Orbitron;
+    color: #ff015a;    
+    border: #ff015a 4px solid;
+    text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
+    box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
 }
 
-a:hover {
-    color: #ff01b3;
-    background: #DE004E;
-    box-shadow: 0 0 10px #DE004E, 0 0 40px #DE004E, 0 0 80px #DE004E;
+.purchase:hover {
+    color: #ff015a;
+    text-shadow: 0 0 1em #ff015a;
+    box-shadow: 0 0 2em 0 #ff015a, inset  0 0 2em 0 #ff015a;
 }
 
 /*----- main table ----*/
