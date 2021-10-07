@@ -33,6 +33,12 @@ h2 {
     color: #ff015a;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
 /*------ purchase button -----*/
 
 .purchase {
