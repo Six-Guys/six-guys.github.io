@@ -1,6 +1,7 @@
 /*---- main page----*/
 body {
-    background-color: #150D2B;
+    min-height: 100vh;
+    background: linear-gradient(#10141e, #2b284b);
 }
 
 h1 {
@@ -10,53 +11,67 @@ h1 {
 }
 /*---- cart button -----*/
 
-.cart-button img.image-main{
-    position: relative;
-    float: right;
-    width: 60px;
-    height: 50px;
-    max-width: 100%;
+/*------ purchase text -------*/
+
+h1 {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
 }
-.cart-button img.image-hover{
-    position: absolute;
-    opacity: 0;
-    top: 7;
-    right: 0;
-    left: 92.9%;
-    bottom: 0;
-    object-fit: contain;
-    transition: opacity .2s;
-    width: 60px;
-    height: 50px;
+
+/*------ purchase button -----*/
+
+.purchase {
+    display: flex;
+    width: fit-content; 
+    margin: auto;  
+    margin-top: 20px; 
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    letter-spacing: 4px;   
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+    font-family: Orbitron;
+    color: #ff015a;    
+    border: #ff015a 4px solid;
+    text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
+    box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
 }
-.cart-button:hover img.image-hover{
-    opacity: 1;
+
+.purchase:hover {
+    color: #ff015a;
+    text-shadow: 0 0 1em #ff015a;
+    box-shadow: 0 0 2em 0 #ff015a, inset  0 0 2em 0 #ff015a;
 }
 
 /*----- main table ----*/
 
-.cart-page {
-    margin: 50px auto;
-    float: left;
-    width: 50%;
-    padding: 5px;
-}
 .cart-page table{
-    border: 3px solid #860029;
+    border-top: 3px solid #860029;
+    border-bottom: 3px solid #860029;
     border-radius: 10px;
-    width: 100%;
+    margin-top: 50px;
+    width: 80%;
     float: left;
     color: #fff;
 }
-.cart-info{
+.cart-page{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;	
 }
-th{
+th {
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #860029;
     font-weight: normal;
 }
 td{
@@ -74,21 +89,3 @@ td img{
     color: #fff;
 }
 
-/*------- table on the right ------*/
-.total table{
-    border: 3px solid #860029;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    float: right;
-    color: #fff;
-}
-*{
-    box-sizing: border-box;
-} 
-.total {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    padding: 5px;
-}
