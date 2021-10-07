@@ -6,18 +6,17 @@ body {
 
 @font-face {
     font-family: 'orbitronlight';
-    src: url('https://six-guys.github.io/fonts/orbitronlight.woff2') format('woff2'),
-         url('https://six-guys.github.io/fonts/orbitronlight.woff') format('woff');
+    src: url('https://six-guys.github.io/fonts/orbitron_light-webfont.woff2') format('woff2'),
+         url('https://six-guys.github.io/fonts/orbitron_light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 /*---- cart button -----*/
 
 /*------ purchase text -------*/
 
 h1 {
-    font-family: 'orbitronlight';
+    font-family: 'orbitronlight' , Arial;
     display: flex;
     margin-top: 50px;
     align-items: center;
