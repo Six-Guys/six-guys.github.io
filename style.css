@@ -65,9 +65,8 @@ h2 {
 /*----- main table ----*/
 
 .cart-page table{
-    border-top: 3px solid #860029;
-    border-bottom: 3px solid #860029;
-    border-radius: 10px;
+    border-top: 3px solid #ff015a;
+    border-bottom: 3px solid #ff015a;
     margin-top: 50px;
     width: 80%;
     float: left;
