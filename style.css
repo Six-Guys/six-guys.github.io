@@ -13,7 +13,7 @@ body {
 }
 /*---- cart button -----*/
 
-/*------ purchase text -------*/
+/*------ Headers -------*/
 
 h1 {
     font-family: 'orbitronlight', Arial, sans-serif;
@@ -33,6 +33,11 @@ h2 {
     color: #ff015a;
 }
 
+/*------ Main Text -----*/
+
+p {
+    font-family: 'Montserrat', Arial;
+}
 /*------ purchase button -----*/
 
 .purchase {
