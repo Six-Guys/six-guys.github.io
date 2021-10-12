@@ -84,6 +84,7 @@ th {
     padding: 5px;
     color: #fff;
     font-weight: normal;
+    font-size: 25px;
 }
 td{
     padding: 10px 5px;
@@ -96,7 +97,6 @@ td input{
 td img{
     width: 150px;
     height: 150px;
-    margin-right: 10px;
     color: #fff;
 }
 
