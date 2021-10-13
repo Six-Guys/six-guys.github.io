@@ -124,6 +124,7 @@ th {
     color: #fff;
     font-weight: normal;
     font-size: 25px;
+    font-family: 'Montserrat', Arial;
 }
 td{
     padding: 10px 5px;
@@ -137,5 +138,6 @@ td img{
     width: 150px;
     height: 150px;
     color: #fff;
+    font-family: 'Montserrat', Arial;
 }
 
