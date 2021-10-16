@@ -17,6 +17,7 @@ body {
 
 h1 {
     font-family: 'orbitronlight', Arial, sans-serif;
+    font-size: 12em;
     display: flex;
     margin-top: 50px;
     align-items: center;
