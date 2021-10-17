@@ -73,7 +73,7 @@ p {
     float:right;
 }
 
-/*------ purchase button -----*/
+/*------ pricing page purchase button -----*/
 
 .purchase {
     display: flex;
@@ -102,7 +102,19 @@ p {
     box-shadow: 0 0 2em 0 #ff015a, inset  0 0 2em 0 #ff015a;
 }
 
-/*----- main table ----*/
+/*----- pricing page header ----*/
+
+.carthead {
+    font-family: 'orbitronlight', Arial, sans-serif;
+    font-size: 3em;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/*----- pricing page main table ----*/
 
 .cart-page table{
     border-top: 3px solid #ff015a;
