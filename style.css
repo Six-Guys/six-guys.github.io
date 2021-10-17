@@ -20,21 +20,34 @@ h1 {
     font-size: 12em;
     display: flex;
     margin-top: 50px;
+    margin-bottom: auto;
     align-items: center;
     justify-content: center;
     color: #fff;
 }
 
 h2 {
-    font-family: 'orbitronlight' , Arial, sans-serif;
-    display: flex;
+    font-family: 'Montserrat' , Arial, sans-serif;
+    font-size: 3em;
     margin-top: 10px;
+    margin-bot: auto;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: #ff015a;
 }
 
-product-image {
+h3 {
+    font-family: 'Montserrat' , Arial, sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff015a;
+}
+
+.product-image {
     display: block;
     max-width: 100%;
     height: auto;
