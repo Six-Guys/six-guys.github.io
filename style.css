@@ -83,12 +83,6 @@ h3 {
     transform: translate(-50%, -50%);
   }
 
-.centered-bot {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 /*------ Main Text -----*/
 
