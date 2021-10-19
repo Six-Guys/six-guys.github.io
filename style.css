@@ -2,7 +2,6 @@
 body {
     min-height: 100vh;
     background: linear-gradient(#10141e, #2b284b);
-    position:fixed;
     top:0;
     bottom:0;
     left:0;
@@ -63,8 +62,9 @@ h3 {
 }
 
 .banner {
+    margin-top: 47px;
     display: block;
-    width: 1500px;
+    width: 100%;
 }
 
 /*------ Main Text -----*/
