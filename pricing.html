@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width">
     <title> Check Out </title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src=main.js></script>>
 </head>
 
 <body>
@@ -11,7 +12,7 @@
 
     <!--- this is the header -->
 
-    <h1 class="carthead"> Your cart total: 6200$</h1>
+    <h1 class="carthead" id ="Price"> Your cart total: 0$</h1>
 
     <!--- this is the purchase button -->
 
@@ -22,7 +23,7 @@
     <!--- these are the glasses and the quantity-->
     <div class="cart-page">
         <!--- Glasses 1-->
-        <table>
+        <table id ="1">
             <tr>
                 <th>Eyeroh Basic</th>
                 <th></th>
@@ -40,11 +41,11 @@
                         <small>Price: 800$</small>
                     </div>
                 </td>
-                <td><input type="number" value="1"></td>
+                <td><button type="button" class ="atc" onclick="addToCart1()">Add to Cart</button></td>
             </tr>
         </table>
         <!--- Glasses 2-->
-        <table>
+        <table id = "2">
             <tr>
                 <th>Eyeroh</th>
                 <th></th>
@@ -62,11 +63,11 @@
                         <small>Price: 1200$</small>
                     </div>
                 </td>
-                <td><input type="number" value="1"></td>
+                <td><button type="button" class ="atc" onclick="addToCart2()">Add to Cart</button></td>
             </tr>
         </table>
         <!--- Glasses 3-->
-        <table>
+        <table id ="3">
             <tr>
                 <th>Eyeroh premium</th>
                 <th></th>
@@ -84,11 +85,11 @@
                         <small>Price: 1800$</small>
                     </div>
                 </td>
-                <td><input type="number" value="1"></td>
+                <td><button type="button" class ="atc" onclick="addToCart3()">Add to Cart</button></td>
             </tr>
         </table>
         <!--- Glasses 4-->
-        <table>
+        <table id = "4">
             <tr>
                 <th>Eyeroh ultimate</th>
                 <th></th>
@@ -106,7 +107,7 @@
                         <small>Price: 2400$</small>
                     </div>
                 </td>
-                <td><input type="number" value="1"></td>
+                <td><button type="button" class ="atc" onclick="addToCart4()">Add to Cart</button></td>
             </tr>
         </table>
     </div>

@@ -257,3 +257,33 @@ td img{
       text-align: right;
       
   }
+
+  /*------ pricing page add to cart buttons -----*/
+
+.atc {
+    display: flex;
+    width: fit-content; 
+    margin: auto;  
+    margin-top: 3px; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    letter-spacing: 2px;   
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+    font-family: 'orbitronlight';
+    color: #ff015a;    
+    border: #ff015a 2px solid;
+    text-shadow: 0 0 0.25em #ff015a;
+    box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
+    background-color: #2b284b;
+}
+
+.atc:hover {
+    color: #ff015a;
+    text-shadow: 0 0 1em #ff015a;
+    box-shadow: 0 0 2em 0 #ff015a, inset  0 0 2em 0 #ff015a;
+}
