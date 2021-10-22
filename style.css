@@ -271,5 +271,20 @@ p {
       
   }
 
+/*-------- Features Menu --------*/
+.ftable td {
 
+    color: #fff;
+    font-family: 'Montserrat';
+}
 
+.title h2 {
+
+    font-family: 'orbitronlight'
+    
+}
+
+.Bcolor {
+
+    border-color: #ff015a;
+}
