@@ -24,7 +24,6 @@ body::-webkit-scrollbar {
     font-weight: normal;
     font-style: normal;
 }
-/*---- cart button -----*/
 
 /*------ Headers -------*/
 
@@ -183,44 +182,58 @@ p {
 
 /*----- pricing page main table ----*/
 
-.cart-page table{
-    border-top: 3px solid #ff015a;
-    border-bottom: 3px solid #ff015a;
-    margin-top: 50px;
-    width: 80%;
-    float: left;
-    color: #fff;
-}
+
 .cart-page{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center;	
+    padding-top: 10%;
 }
-th {
-    text-align: left;
-    padding: 5px;
-    color: #fff;
-    font-weight: normal;
-    font-size: 25px;
-    font-family: 'Montserrat', Arial;
+
+.atc {
+    display: flex;
+    width: fit-content; 
+    margin: auto;  
+    margin-top: 3px; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px 50px;
+    border-radius: 10px;
+    letter-spacing: 2px;   
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'orbitronlight';
+    color: #ff015a;    
+    border: #ff015a 2px solid;
+    text-shadow: 0 0 0.25em #ff015a;
+    box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
+    background-color: #2b284b;
 }
-td{
-    padding: 10px 5px;
+
+.atc:hover {
+    color: #ff015a;
+    text-shadow: 0 0 1em #ff015a;
+    box-shadow: 0 0 2em 0 #ff015a, inset  0 0 2em 0 #ff015a;
 }
-td input{
-    width: 40px;
-    height: 30px;
-    padding: 5px;
-}
-td img{
+
+.atc img{
+    border-radius: 6px;
     width: 150px;
     height: 150px;
     color: #fff;
     font-family: 'Montserrat', Arial;
 }
 
+.container {
+    padding: 2px 16px;
+}
+
+
+/*------- footer ----*/
 .footer {
     position: relative;
     left: 0;
@@ -258,32 +271,5 @@ td img{
       
   }
 
-  /*------ pricing page add to cart buttons -----*/
 
-.atc {
-    display: flex;
-    width: fit-content; 
-    margin: auto;  
-    margin-top: 3px; 
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    border-radius: 10px;
-    letter-spacing: 2px;   
 
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: 0.2s;
-    font-family: 'orbitronlight';
-    color: #ff015a;    
-    border: #ff015a 2px solid;
-    text-shadow: 0 0 0.25em #ff015a;
-    box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
-    background-color: #2b284b;
-}
-
-.atc:hover {
-    color: #ff015a;
-    text-shadow: 0 0 1em #ff015a;
-    box-shadow: 0 0 2em 0 #ff015a, inset  0 0 2em 0 #ff015a;
-}
