@@ -4,9 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script>
+        $(".btn").click(function(){
+        $("input[type='text'], textarea").val("");
+        }); 
+    </script>
 
     <style>
+
+        
+        * {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        }
+
+        
+
+        .wrapper {
+        margin: 0px auto 0;
+        width: 100%;
+        max-width: 680px;
+        padding: 20px;
+        box-sizing: border-box;
+        }
+
+        /* content */
+        .content {
+        text-align: center;
+        }
+
+        .content h1 {
+        letter-spacing: 1px;
+        }
+
+
+        /* form */
+        .form {
+        width: 100%;
+        margin: 25px 0;
+        }
+
+        .top-form,
+        .middle-form,
+        .bottom-form {
+        width: 100%;
+        min-height: 65px;
+        margin: 10px 0;
+        }
+
+        .form input[type="text"],
+        .form textarea {
+        border: 2px solid #fff;
+        padding: 10px 5px;
+        outline: none;
+        border-radius: 2px;
+        width: 100%;
+        transition: all 0.2s ease;
+        }
+
+        .form input:focus,
+        .form textarea:focus {
+        border-color: #4ca1af;
+        outline: none;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0125),
+            0 0 8px rgba(76, 161, 175, 0.5);
+        }
+
+        .form .label {
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        }
+
+        /* top-contact */
+        .top-form .inner-form {
+        width: 29.9%;
+        float: left;
+        margin-right: 5%;
+        }
+
+        .top-form .inner-form:last-child {
+        margin-right: 0;
+        }
+
+
+        /* middle-form */
+        .middle-form {
+        clear: both;
+        }
+
+        /* bottom-form */
+        .bottom-form textarea {
+        height: 80px;
+        }
+
+        .btn {
+        width: 200px;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        margin: auto;
+        margin-top: 20px;
+        justify-content: center;
+        padding: 15px 30px;
+        border-radius: 10px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: 0.2s;
+        font-family: 'orbitronlight';
+        color: #ff015a;
+        border: #ff015a 4px solid;
+        text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
+        box-shadow: 0 0 1em 0 #ff015a, inset 0 0 1em 0 #ff015a;
+        }
+
+        ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-family: "Kavivanar", cursive;
+        }
+        ::-moz-placeholder {
+        /* Firefox 19+ */
+        font-family: "Kavivanar", cursive;
+        }
+        :-ms-input-placeholder {
+        /* IE 10+ */
+        font-family: "Kavivanar", cursive;
+        }
+
+        @media screen and (max-width: 460px) {
+        .top-form .inner-form {
+            width: 100%;
+            margin: 5px 0;
+        }
+        .top-form,
+        .middle-form,
+        .bottom-form {
+            margin: 5px 0;
+        }
+        .form {
+            margin-top: 10px;
+        }
+        }
      
     </style>
 
@@ -15,80 +159,77 @@
     
 </head>
 
-
-
-<body>
-    
-
-
     <div class="navbar">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
         <a href="features.html">Features</a>
         <a href="team.html">Team</a> 
 
         <div class = "logo">
-            <a href = "index.html"><img src = "logo for now.jpg" width = "40" height = "40" ></a>
+            <a href = "index.html"><img src = "images/logo.png" width = "40" height = "40" ></a>
 
         </div>
         
         <div class = "navbar-right">
             <a href="contact.html">Contact</a>
-            <a href=""><i class="fa fa-fw fa-shopping-bag"></i> cart</a>
+            <a href="pricing.html"><i class="fa fa-fw fa-shopping-bag"></i> cart</a>
         </div>
-    
+
     </div> 
-
-
     
-        <h2>CONTACT FORM</h2>
-        <h3>Connect with us by sending us a form</h3>
-    
+    <div class="wrapper">
+        <div class="form">
+      
+          <div class="top-form">
+            <div class="inner-form">
+              <div class="label">name</div>
+              <input type="text" placeholder="Jhon">
+            </div>
+            <div class="inner-form">
+              <div class="label">email</div>
+              <input type="text" placeholder="Example@gmail.com">
+            </div>
+            <div class="inner-form">
+              <div class="label">phone</div>
+              <input type="text" placeholder="1234567890">
+            </div>
+          </div>
+      
+          <div class="middle-form">
+            <div class="inner-form">
+              <div class="label">subject</div>
+              <input type="text" placeholder="Subject">
+            </div>
+          </div>
+      
+          <div class="bottom-form">
+            <div class="inner-form">
+              <div class="label">message</div>
+              <textarea placeholder="Your message"></textarea>
+            </div>
+          </div>
+      
+          <div class="btn">send form</div>
+      
+        </div>
+      </div>
 
-            
-                <h3>Name</h3>
-                <div text-align:center> 
-                <input type="text" text-align="center" placeholder="John">
-                </div>
 
-            
-                <h3>Email</h3>
-                <input type="text" placeholder="john@example.com">
-            
 
-            
-                <h3>Phone</h3>
-                <input type="text" placeholder="63823212">
-           
 
-        
-
-        
-            
-                <h3>Subject</h3>
-                <input type="text" placeholder="Subject">
-           
-        
-
-        
-            
-                <h3>Message</h3>
-                <textarea placeholder="your message"></textarea>
-            
-       
-
-        <div class="btn">send message</div>
-
+      <footer>
 
         <div class="footer">
-            <div class = "left">
-              <p1>More ways to shop : call us for more details.</p1>
+            <div class = "left" style = "top: 30%;">
+              <p1>More ways to shop : Call us at 555-555-5555 for more details.</p1>
             </div>
             
             <div class = "center">
-              <h>                                           Copyright © 2021 Six-Guys. All rights reserved.                                     Canada (English)</h1>
+              <h>Copyright © 2021 Six-Guys. All rights reserved.                                     Canada (English)</h1>
             </div>
       
-          </div>
+        </div>
+    
+    </footer>
 </body>
 </html>
