@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title> Check Out </title>
+    <title> Cart </title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src=main.js></script>>
 </head>
@@ -16,7 +16,7 @@
 
     <!--- this is the purchase button -->
 
-    <a href="#" class="purchase">
+    <a href="checkout.html" class="purchase">
         Purchase 
     </a>
 
@@ -28,8 +28,11 @@
             <div class="container">
                 <h4><b>Eyeroh Base</b></h4>
                 <p>800$</p>
-                <button onclick="removeFromCart1()">-</button>
-                <button onclick="addToCart1()">+</button>
+                <div class="increment">
+                    <button onclick="removeFromCart1()">-</button>
+                    <p id='g1'>0</p>
+                    <button onclick="addToCart1()">+</button>
+                </div>
             </div>
         </div>
             <!--- Glasses 2-->
@@ -38,8 +41,11 @@
             <div class="container">
                 <h4><b>Eyeroh</b></h4>
                 <p>1200$</p>
-                <button onclick="removeFromCart2()">-</button>
-                <button onclick="addToCart2()">+</button>
+                <div class="increment">
+                    <button onclick="removeFromCart2()">-</button>
+                    <p id='g2'>0</p>
+                    <button onclick="addToCart2()">+</button> 
+                </div>
             </div>
         </div>
         <!--- Glasses 3-->
@@ -48,8 +54,11 @@
             <div class="container">
                 <h4><b>Eyeroh Premium</b></h4>
                 <p>1800$</p>
-                <button onclick="removeFromCart3()">-</button>
-                <button onclick="addToCart3()">+</button>
+                <div class="increment">
+                    <button onclick="removeFromCart3()">-</button>
+                    <p id='g3'>0</p>
+                    <button onclick="addToCart3()">+</button>
+                </div>
             </div>
         </div>
         <!--- Glasses 4-->
@@ -58,8 +67,11 @@
             <div class="container">
                 <h4><b>Eyeroh Ultimate</b></h4>
                 <p>2400$</p>
-                <button onclick="removeFromCart4()">-</button>
-                <button onclick="addToCart4()">+</button>
+                <div class="increment">
+                    <button onclick="removeFromCart4()">-</button>
+                    <p id='g4'>0</p>
+                    <button onclick="addToCart4()">+</button>
+                </div>
             </div>
         </div>
     </div>

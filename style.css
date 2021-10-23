@@ -194,14 +194,14 @@ p {
 
 .atc {
     display: flex;
-    width: fit-content; 
-    margin: auto;  
+    width:auto; 
+    margin:auto;  
     margin-top: 3px; 
     align-items: center;
     justify-content: center;
-    padding: 5px 50px;
+    padding: 5px 10px;
     border-radius: 10px;
-    letter-spacing: 2px;   
+    letter-spacing: 2px; 
 
     text-transform: uppercase;
     text-decoration: none;
@@ -212,6 +212,28 @@ p {
     text-shadow: 0 0 0.25em #ff015a;
     box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
     background-color: transparent;
+}
+
+.atc image {
+    align-items: left;
+}
+
+.increment {
+    display: flex;
+    width: fit-content; 
+    margin: auto;  
+    margin-top: 20px; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    letter-spacing: 4px;   
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+    font-family: 'orbitronlight';
+    color: #ff015a;    
+    text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
 }
 
 
@@ -230,7 +252,7 @@ p {
 }
 
 .container {
-    padding: 2px 16px;
+    padding: 2px 10px;
 }
 
 
