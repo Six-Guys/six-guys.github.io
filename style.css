@@ -311,3 +311,177 @@ p {
 
     border-color: #ff015a;
 }
+
+
+/*---------- Checkout page ---------*/
+
+.checkpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.box {
+    width: 330px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+}
+
+.box header {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+form{
+    display: flex;
+    width: 400%;
+}
+
+.page{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.title{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.field {
+    height: 45px;
+    width: 330px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+
+.field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ff015a;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+.field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: #150D2B;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-size: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.field button:hover {
+    background: #DE004E;
+}
+
+.btns button{
+    margin-top: -20px!important;
+}
+
+.prev{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+.next{
+    margin-left: 3px;
+    font-size: 17px;
+}
+
+.box .progress-bar {
+    display: flex;
+    margin: 40px 0;
+}
+
+.step{
+    text-align: center;
+    width: 100%;
+}
+
+.step p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.bullet {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.step:last-child .bullet:before,
+.step:last-child .bullet:after {
+    display: none;
+}
+
+.bullet:before,
+.bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: black;
+}
+
+.bullet:after {
+    background: #ff015a;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.step span{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+}
