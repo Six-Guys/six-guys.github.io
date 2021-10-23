@@ -211,8 +211,9 @@ p {
     border: #ff015a 2px solid;
     text-shadow: 0 0 0.25em #ff015a;
     box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
-    background-color: #2b284b;
+    background-color: transparent;
 }
+
 
 .atc:hover {
     color: #ff015a;
