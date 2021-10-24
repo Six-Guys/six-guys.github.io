@@ -1,0 +1,15 @@
+Design
+Mood: Dark and futuristic
+Colour scheme: 
+#FFF
+#DE004E
+#860029
+#321450
+#150D2B
+#10141e -- background
+Font: 
+- Orbitronlight
+- Montserrat
+Headers: 
+h1 for titles
+h2 for subtitles

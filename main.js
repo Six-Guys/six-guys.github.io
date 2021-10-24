@@ -78,5 +78,7 @@ function removeFromCart4(){
 }
 
 
+
+
 // Checkout page
 

@@ -259,6 +259,7 @@ p {
 /*------- footer ----*/
 .footer {
     position: relative;
+    margin-top: 20px;
     left: 0;
     bottom: 0;
     width: 100%;
