@@ -14,39 +14,152 @@
                 <a href="#About">About</a>
                 <a href="#cart"><i class="fa fa-fw fa-shopping-bag"></i> Cart</a>
             </div>
-
-
         </div> 
+        <script>
+        var opacity = 0;
+		var intervalID= 0;
+        var number;
+        var div_num;
+
+        function decider(id)
+        {
+            div_num = document.getElementById(id);
+            opacity = Number(window.getComputedStyle(div_num).getPropertyValue("opacity"));
+            if (opacity < 1)
+            {
+                fadein_effect();
+            }
+            else
+            {
+                fadeout_effect();
+            }
+        }
+        function fadein_effect()
+		{
+			intervalID=setInterval(display,20);
+		}
+		function fadeout_effect()
+		{
+			intervalID=setInterval(hide,20);
+		}
+		function display()
+		{
+			if (opacity < 1)
+			{
+				opacity += 0.1;
+				div_num.style.opacity = opacity;
+			}
+			else
+			{
+				clearInterval(intervalID);
+			}
+		}
+		function hide()
+		{
+			if (opacity > 0)
+			{
+				opacity -= 0.1;
+				div_num.style.opacity = opacity;
+			}
+			else
+			{
+				clearInterval(intervalID);
+			}
+		}
+          </script>
     </head>
 
 <link rel="stylesheet" href="style.css">
 
 <style>
+    #div1, #div2, #div3, #div4, #div5, #div6 {  
+      opacity:0;
+    }
+
     h1 {
         margin: 30px 25px;
     }
-    body {text-align: center;}
+    
+    body {
+        text-align: center;
+        font-family: 'Montserrat', Arial;
+        color:white;
+    }
 
     table, th, td {
         text-align: center;
         border-spacing: 66px 1em; 
+        padding: 7px;
     }
 
     .box{
         margin-left:auto;
         margin-right:auto;
+        margin-bottom: 60px;
         border-radius: 25px;
         background: #08016e38;
         padding: 20px; 
         width: 1000px;
-        height: 1180px;  
+        height: 750px;  
+        border: #bdc2ff 4px solid;
+        text-shadow: 0 0 0.25em #ff015a, 0 0 0.05em whitesmoke;
+        box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
     }
 
     img {
         border-radius: 50%;
         box-shadow: 0px 0px 18px 9px rgb(255, 0, 55);
+        float: left;
+    }
+    .change {
+        width: 500;
+        height: 500;
+    }
+    .mye {
+        width: 240;
+        height: 240;
+        border-radius: 50%;
+        background-color:  rgba(65, 2, 5, 0.432);
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    p {
+        color:rgb(255, 187, 204);
+        height: 160px;
+        margin-right:15;
+        position:absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button1 {
+        display: flex;
+        margin: auto;
+        width: fit-content;
+        margin-top: 30px; 
+        align-items: center;
+        justify-content: center;
+        padding: 7px 7px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0);
+
+        font-size:25px;
+        text-transform: none;
+        text-decoration: none;
+        transition: 0.2s;
+        color: hsl(293, 100%, 75%);    
+        border: #ff015a 4px solid;
+        text-shadow: 0 0 0.25em #ff015a, 0 0 0.05em whitesmoke;
+        box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
     }
 
+    .button1:hover {
+        color: hsl(293, 100%, 75%);
+        text-shadow: 0 0 1em #5e5c5c;
+        box-shadow: 0 0 2em 0 #ff015a, inset  0 0 2em 0 #ff015a;
+    }
 
 </style>
 
@@ -56,37 +169,53 @@
     <div class="box">
         <table align="center" style="width:500">
             <tr>
-                <th><img src="images/TempPfp3.jpg" style="width:240;height:240" alt ="Temporary profile pic (Will stay if not requested to be changed)"></th>
-                <th><img src="images/TempPfp5.jpg" style="width:240;height:240" alt ="Temporary profile pic (Will stay if not requested to be changed)"></th>
-                <th><img src="images/Anthony-Pfp.png" style="width:240;height:240" alt ="Anthony Daher Profile Image"></th>
-            </tr>
-            <tr>
-                <th><b>Christian Paravalos</b></th>
-                <th><b>Colby Todd</b></th>
-                <th><b>Anthony Daher</b></th>
-            </tr>
-            <tr>
-                <th>I’m studying computer science at the University of Ottawa and currently am in my first year of study. I am passionate about developing stock trading algorithms.</th>
-                <th>I’m a first year software engineering student at the University of Ottawa.</th>
-                <th>I’m in my first year of study in software engineering at the University of Ottawa. Life’s like a game, gain experience and level up.</th>
+                <th>
+                    <div id="change">
+                        <img src="images/TempPfp3.jpg" style="width:240;height:240" alt ="Christian's PFP" />
+                        <div id="div1" class="mye"><p>I’m studying computer science at the University of Ottawa and currently am in my first year of study. I am passionate about developing stock trading algorithms.</p></div>
+                        <button onclick="decider('div1')" class="button1">Christian Paravalos</button>
+                    </div>
+                </th>
+                <th>
+                    <div id="change">
+                        <img src="images/TempPfp5.jpg" style="width:240;height:240" alt ="Colby's PFP">
+                        <div id="div2" class="mye"><p>I’m a first year software engineering student at the University of Ottawa.</p></div>
+                        <button onclick="decider('div2')" class="button1">Colby Todd</button>
+                    </div>
+                </th>
+                <th>
+                    <div id="change">
+                        <img src="images/Anthony-Pfp.png" style="width:240;height:240" alt ="Anthony's PFP'">
+                        <div id="div3" class="mye"><p>I’m in my first year of study in software engineering at the University of Ottawa. Life’s like a game, gain experience and level up.</p></div>
+                        <button onclick="decider('div3')" class="button1">Anthony Daher</button>
+                    </div>
+                </th>
             </tr>
         </table>
 
         <table align="center" style="width:500">
             <tr>
-                <th><img src="images/TempPfp2.jpg" style="width:240;height:240" alt ="Temporary profile pic (Will stay if not requested to be changed)"></th>
-                <th><img src="images/TempPfp4.jpg" style="width:240;height:240" alt ="Temporary profile pic (Will stay if not requested to be changed)"></th>
-                <th><img src="images/TempPfp1.jpg" style="width:240;height:240" alt ="Temporary profile pic (Will stay if not requested to be changed)"></th>
-            </tr>
-            <tr>
-                <th><b>Mustafa Al-Sakkaf</b></th>
-                <th><b>Yinhui Wu</b></th>
-                <th><b>>Alex Maalouf</b></th>
-            </tr>
-            <tr>
-                <th>I'm currently studying software engineering at the University of Ottawa.</th>
-                <th>I’m a first year software engineering student at the University of Ottawa.Life is worth living.</th>
-                <th>I am studying my first year of software engineering at the University of Ottawa. I love soccer and food. They are my passions.</th>
+                <th>
+                    <div id="change">
+                        <img src="images/TempPfp2.jpg" style="width:240;height:240" alt ="Mustafa's PFP" />
+                        <div id="div4" class="mye"><p>I'm currently studying software engineering at the University of Ottawa.</p></div>
+                        <button onclick="decider('div4')" class="button1">Mustafa Al-Sakkaf</button>
+                    </div>
+                </th>
+                <th>
+                    <div id="change">
+                        <img src="images/TempPfp4.jpg" style="width:240;height:240" alt ="Kevin's PFP">
+                        <div id="div5" class="mye"><p>I’m a first year software engineering student at the University of Ottawa. Life is worth living.</p></div>
+                        <button onclick="decider('div5')" class="button1">Yinhui Wu</button>
+                    </div>
+                </th>
+                <th>
+                    <div id="change">
+                        <img src="images/TempPfp1.jpg" style="width:240;height:240" alt ="Alex's PFP">
+                        <div id="div6" class="mye"><p>I am studying my first year of software engineering at the University of Ottawa. I love soccer and food. They are my passions.</p></div>
+                        <button onclick="decider('div6')" class="button1">Alex Maalouf</button>
+                    </div>
+                </th>
             </tr>
         </table>
     </div>

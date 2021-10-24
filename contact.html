@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
+    <title> document </title>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+   
 
-    <script>
-        $(".btn").click(function(){
-        $("input[type='text'], textarea").val("");
-        }); 
-    </script>
+    
 
     <style>
 
@@ -48,6 +47,7 @@
         .form {
         width: 100%;
         margin: 25px 0;
+        margin-top: 50px;
         }
 
         .top-form,
@@ -70,15 +70,24 @@
 
         .form input:focus,
         .form textarea:focus {
-        border-color: #4ca1af;
+        border-color: #ff015a;
         outline: none;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0125),
             0 0 8px rgba(76, 161, 175, 0.5);
         }
 
-        .form .label {
+        .form .label1 {
+        margin-top: 40px;
         margin-bottom: 5px;
         text-transform: capitalize;
+        display: flex;
+        padding: 10px 5px 5px 0px;
+        border-radius: 100px;
+        letter-spacing: 3px;
+        color: #ff015a;
+        font-family: 'orbitronlight';
+
+
         }
 
         /* top-contact */
@@ -120,21 +129,22 @@
         font-family: 'orbitronlight';
         color: #ff015a;
         border: #ff015a 4px solid;
+        background-color:rgb(75, 34, 34);
         text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
         box-shadow: 0 0 1em 0 #ff015a, inset 0 0 1em 0 #ff015a;
         }
 
         ::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        font-family: "Kavivanar", cursive;
+        font-family: "orbitronlight";
         }
         ::-moz-placeholder {
         /* Firefox 19+ */
-        font-family: "Kavivanar", cursive;
+        font-family: "orbitronlight";
         }
         :-ms-input-placeholder {
         /* IE 10+ */
-        font-family: "Kavivanar", cursive;
+        font-family: "orbitronlight";
         }
 
         @media screen and (max-width: 460px) {
@@ -150,6 +160,10 @@
         .form {
             margin-top: 10px;
         }
+        }
+
+        footer{
+          margin-top: 110px;
         }
      
     </style>
@@ -182,34 +196,35 @@
       
           <div class="top-form">
             <div class="inner-form">
-              <div class="label">name</div>
-              <input type="text" placeholder="Jhon">
+              <div class="label1">name</div>
+              <input  type="text" placeholder="Jhon">
             </div>
             <div class="inner-form">
-              <div class="label">email</div>
-              <input type="text" placeholder="Example@gmail.com">
+              <div class="label1">email</div>
+              <input  type="text" placeholder="Example@gmail.com">
             </div>
             <div class="inner-form">
-              <div class="label">phone</div>
+              <div class="label1">phone</div>
               <input type="text" placeholder="1234567890">
             </div>
           </div>
       
           <div class="middle-form">
             <div class="inner-form">
-              <div class="label">subject</div>
+              <div class="label1">subject</div>
               <input type="text" placeholder="Subject">
             </div>
           </div>
       
           <div class="bottom-form">
             <div class="inner-form">
-              <div class="label">message</div>
+              <div class="label1">message</div>
               <textarea placeholder="Your message"></textarea>
             </div>
           </div>
       
-          <div class="btn">send form</div>
+          <div class="btn">Send Form</div>
+          
       
         </div>
       </div>
@@ -231,5 +246,7 @@
         </div>
     
     </footer>
+    
 </body>
 </html>
+

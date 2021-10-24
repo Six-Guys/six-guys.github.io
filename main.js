@@ -1,3 +1,9 @@
+// Front page
+
+function warning(){
+    alert("You are about to head to the purchase page");
+}
+
 
 // Pricing page
 
