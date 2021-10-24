@@ -74,25 +74,3 @@ function removeFromCart4(){
 
 // Checkout page
 
-const slidePage = document.querySelector(".slidepage");
-const firstNextBtn = document.querySelector(".nextBbt")
-const prevBtnSec = document.querySelector(".prev-1");
-const nextBtnSec = document.querySelector(".next-1");
-const prevBtnThird = document.querySelector(".prev-2");
-const submitBtn = document.querySelector("submit");
-
-firstNextBtn.addEventListener("click", function(){
-    slidePage.style.marginleft = "-25%";
-});
-
-prevBtnSec.addEventListener("click", function(){
-    slidePage.style.marginleft = "25%";
-});
-
-nextBtnSec.addEventListener("click",function(){
-    slidePage.style.marginleft = "-25%";
-});
-
-prevBtnThird.addEventListener("click", function(){
-    slidePage.style.marginleft = "25%";
-});
