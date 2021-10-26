@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
-    <link rel="stylesheet" href="fontawesome/css/all.css">
     <style>
+
       * {
       padding: 0;
       margin: 0;
@@ -12,8 +12,10 @@
       }
       
       body {
+        min-height: 100vh;
       font-family: tahoma;
-      overflow: hidden;
+      background: linear-gradient(#10141e, #2b284b);
+      overflow-x: hidden;
       }
     
       .container {
@@ -109,7 +111,6 @@
       .line {
         width: 76%;
         margin: auto;
-        background: #eee;
         height: 7px;
         position: absolute;
         left: 11.5%;
@@ -122,7 +123,8 @@
         content: '';
         width: 2%;
         height: 100%;
-        background-image: linear-gradient(to right, #a29bfe 0%, #ff7675 100%);
+        background-image:#ff015a;
+        box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
         position: absolute;
         z-index: 2;
         border-radius: 50px;
@@ -139,7 +141,8 @@
       section {
         width: 70%;
         margin: auto;
-        background-image: linear-gradient(to right, #a29bfe 0%, #ff7675 100%);
+        background-image: linear-gradient(to right, #ff015a 100%, #ff015a 100%);
+        box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
         border-radius: 4px;
         padding: 30px;
         color: #fff;
@@ -250,10 +253,10 @@
 </head>
 <body>
     <div class="container">
-      <input type="radio" class = "profile" checked id ="profile">
-      <input type="radio" class = "settings" id ="settings">
-      <input type="radio" class = "posts" id ="posts">
-      <input type="radio" class = "books" id ="books">
+      <input type="radio" class = "profile" checked id ="profile" >
+      <input type="radio" class = "settings" id ="settings" >
+      <input type="radio" class = "posts" id ="posts" >
+      <input type="radio" class = "books" id ="books" >
       <div class="head">
         <ul class="nav">
           <li class="st st1 active" id="1">
@@ -308,14 +311,26 @@
   var d = document.getElementById("4");
   document.getElementById("1").addEventListener("click", function() {
     x.setAttribute("checked", true);
+    y.removeAttribute("checked");
+    z.removeAttribute("checked");
+    t.removeAttribute("checked");
   });
   document.getElementById("2").addEventListener("click", function() {
+    x.removeAttribute("checked");
     y.setAttribute("checked", true);
+    z.removeAttribute("checked");
+    t.removeAttribute("checked");
   });
   document.getElementById("3").addEventListener("click", function() {
+    x.removeAttribute("checked");
+    y.removeAttribute("checked");
     z.setAttribute("checked", true);
+    t.removeAttribute("checked");
   });
   document.getElementById("4").addEventListener("click", function() {
+    x.removeAttribute("checked");
+    y.removeAttribute("checked");
+    z.removeAttribute("checked");
     t.setAttribute("checked", true);
   });
     
