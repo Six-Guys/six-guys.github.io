@@ -33,15 +33,15 @@
         background-image: linear-gradient(to right, #ff015a 100%, #ff015a 100%);
         box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
         border-radius: 4px;
-        padding: 30px;
+        padding: 0px 30px 30px 30px;
         color: #fff;
+        
       }
 
       section span {
         font-size: 3rem;
         display: flex;
         justify-content: center;
-        margin-bottom: 30px;
       }
 
       section p {
@@ -81,6 +81,7 @@
         }
       }
     </style>
+    <a href = "index.html"><img src = "images/logo.png" width = "40" height = "40" float="left"></a>
 </head>
 <body class="checkc">
     <div class="containerc">
@@ -111,14 +112,39 @@
         <section class="profile-section" id="profile-section">
           <span><i class="fa fa-house"></i></span>
           <h1 class="cc">Cart</h1>
-          <p> Display list of items</p>
+          <div class="cartreview">
+            <div class="eye1">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4><b>Eyeroh Base</b></h4>
+              <p>Quantity: 0x</p>
+              <p>800$</p>
+            </div>
+            <div class="eye2">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4><b>Eyeroh</b></h4>
+              <p>Quantity: 0x</p>
+              <p>1200$</p>
+            </div>
+            <div class="eye3">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4><b>Eyeroh Premium</b></h4>
+              <p>Quantity: 0x</p>
+              <p>1800$</p>              
+            </div>
+            <div class="eye4">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4><b>Eyeroh Ultimate</b></h4>
+              <p>Quantity: 0x</p>
+              <p>2400$</p>              
+            </div>
+          </div>
         </section>
         <section class="account-section" id="account-section">
           <span><i class="fa fa-user"></i></span>
           <h1 class="cc">Checkout</h1>
           <p> Display credit card form</p>
         </section>
-        <section class="post-section">
+        <section class="post-section" id="post-section">
           <span><i class="fa fa-edit"></i></span>
           <h1 class="cc">Post section</h1>
           <p> Enter text here</p>

@@ -31,7 +31,6 @@ h1 {
     font-family: 'orbitronlight', Arial, sans-serif;
     font-size: 23.25vh;
     display: flex;
-    margin-top: 3.5%;
     margin-bottom: auto;
     align-items: center;
     justify-content: center;
@@ -324,15 +323,8 @@ p {
 
 /*---------- Checkout page ---------*/
 
-.checkc {
-    min-height: 100vh;
-    font-family: tahoma;
-    background: linear-gradient(#10141e, #2b284b);
-    overflow-x: hidden;
-    }
-  
 .containerc {
-    margin: 150px auto;
+    margin: 30px auto;
     width: 80vw;
 }
 
@@ -486,14 +478,25 @@ ul.navc li.active::after {
 
 .cc {
     font-weight: 900;
-    margin-top: 10px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-family: 'orbitronlight', Arial, sans-serif;
     font-size: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #fff;
+}
+
+.eye1,
+.eye2,
+.eye3,
+.eye4 {
+    display: flex;
+    margin-top: 10px;
+}
+.eye1 img, 
+.eye2 img, 
+.eye3 img, 
+.eye4 img {
+    width: 100px;
+    height: 100px;
 }
