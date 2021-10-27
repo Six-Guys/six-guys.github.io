@@ -194,7 +194,8 @@ p {
 
 .atc {
     display: flex;
-    width:auto; 
+    width:300px; 
+    height: 200px;
     margin:auto;  
     margin-top: 3px; 
     align-items: center;
@@ -236,6 +237,13 @@ p {
     text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
 }
 
+.increment button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #ff015a;    
+    text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
+}
 
 .atc:hover {
     color: #ff015a;
@@ -315,3 +323,177 @@ p {
 
 
 /*---------- Checkout page ---------*/
+
+.checkc {
+    min-height: 100vh;
+    font-family: tahoma;
+    background: linear-gradient(#10141e, #2b284b);
+    overflow-x: hidden;
+    }
+  
+.containerc {
+    margin: 150px auto;
+    width: 80vw;
+}
+
+ul.navc {
+    padding-top: 15px;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+}
+
+ul.navc li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    text-align: center;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .3s ease;
+    vertical-align: middle;
+    height: 60px;
+    position: relative;
+}
+
+ul.navc li::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    transition: all .3s ease;
+}
+
+ul.navc li:hover::before {
+    border: 2px solid #fff;
+    background: #777;
+}
+
+ul.navc li .inner {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+ul.navc li.active, 
+ul.navc li:hover {
+    color: #444;
+}
+
+ul.navc li::after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #777;
+    border-radius: 50%;
+    margin: auto;
+    border: 7px solid #fff;
+    margin-top: 40px;
+    box-shadow: 0 0 5 0 rgba(0,0,0,0.2);
+}
+
+ul.navc li:hover::after,
+ul.navc li.active::after {
+    background: blue;
+}
+
+.linec {
+    width: 76%;
+    margin: auto;
+    height: 7px;
+    position: absolute;
+    left: 11.5%;
+    top: 52px;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.linec span {
+    content: '';
+    width: 2%;
+    height: 100%;
+    background-image:#ff015a;
+    box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50px;
+    transition: all .8s ease;
+}
+
+.contentc {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    animation: anim .7s linear forwards;
+}
+
+.profile:checked~.head .navc li.st1::before,
+.settings:checked~.head .navc li.st1::before,
+.settings:checked~.head .navc li.st2::before,
+.posts:checked~.head .navc li.st1::before,
+.posts:checked~.head .navc li.st2::before,
+.posts:checked~.head .navc li.st3::before,
+.books:checked~.head .navc li.st1::before,
+.books:checked~.head .navc li.st2::before,
+.books:checked~.head .navc li.st3::before,
+.books:checked~.head .navc li.st4::before {
+    border: 2px solid #fff;
+    background: #777;
+    transition: all .3s ease;
+}
+
+.settings:checked ~ .head .linec span {
+    width: 35%;
+}
+
+.posts:checked ~ .head .linec span {
+    width: 68%;
+}
+
+.books:checked ~ .head .linec span {
+    width: 100%;
+}
+
+.profile-section,
+.account-section,
+.post-section,
+.advanced-section {
+    transform: scale(0);
+    transform-origin: center bottom;
+    transition: all .7s ease;
+    position: absolute;
+    top: 0;
+}
+
+.profile:checked~.contentc .profile-section,
+.settings:checked~.contentc .account-section,
+.posts:checked~.contentc .post-section,
+.books:checked~.contentc .advanced-section {
+    display: block;
+    transform: scale(1);
+    transform-origin: bottom;
+}
+
+.cc {
+    font-weight: 900;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'orbitronlight', Arial, sans-serif;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}

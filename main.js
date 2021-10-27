@@ -82,3 +82,30 @@ function removeFromCart4(){
 
 // Checkout page
 
+function page1() {
+    document.getElementById("profile").setAttribute("checked", true);
+    document.getElementById("settings").removeAttribute("checked");
+    document.getElementById("posts").removeAttribute("checked");
+    document.getElementById("books").removeAttribute("checked");
+}
+
+function page2() {
+    document.getElementById("profile").removeAttribute("checked");
+    document.getElementById("settings").setAttribute("checked", true);
+    document.getElementById("posts").removeAttribute("checked");
+    document.getElementById("books").removeAttribute("checked");
+}
+
+function page3() {
+    document.getElementById("profile").removeAttribute("checked");
+    document.getElementById("settings").removeAttribute("checked");
+    document.getElementById("posts").setAttribute("checked", true);
+    document.getElementById("books").removeAttribute("checked");
+}
+
+function page4() {
+    document.getElementById("profile").removeAttribute("checked");
+    document.getElementById("settings").removeAttribute("checked");
+    document.getElementById("posts").removeAttribute("checked");
+    document.getElementById("books").setAttribute("checked", true);
+};
