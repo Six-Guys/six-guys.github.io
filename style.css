@@ -325,7 +325,7 @@ p {
 
 .containerc {
     margin: 30px auto;
-    width: 80vw;
+    width: 90vw;
 }
 
 ul.navc {
@@ -499,4 +499,27 @@ ul.navc li.active::after {
 .eye4 img {
     width: 100px;
     height: 100px;
+}
+
+.pricec1,
+.pricec2,
+.pricec3,
+.pricec4 {
+    position: absolute;
+    right: 30px;
+    padding-top: 60px;
+}
+
+.quanc1,
+.quanc2,
+.quanc3,
+.quanc4 {
+    position: absolute;
+    right: 30px;
+    padding-top: 40px;
+}
+
+.titlec {
+    padding-left: 5px;
+    padding-top: 20px;
 }
