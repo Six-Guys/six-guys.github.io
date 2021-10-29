@@ -1,7 +1,7 @@
 /*---- main page----*/
 body {
     min-height: 100vh;
-    background: linear-gradient(#10141e, #2b284b);
+    background: linear-gradient(#10141e, #2b284b) fixed;
     top:0%;
     bottom:0%;
     left:0%;
