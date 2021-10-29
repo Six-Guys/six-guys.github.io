@@ -37,7 +37,7 @@ function addToCart4(){
     document.getElementById('g4').innerHTML = g4;
 }
 function removeFromCart1(){
-    if (x == 0){
+    if (g1 == 0 ){
     }
     else {
     x -= 800;
@@ -47,7 +47,7 @@ function removeFromCart1(){
     }
 }
 function removeFromCart2(){
-    if (x == 0){
+    if (g2 == 0){
     }
     else {
     x -= 1200;
@@ -57,7 +57,7 @@ function removeFromCart2(){
     }
 }
 function removeFromCart3(){
-    if (x == 0){
+    if (g3 == 0){
     }
     else {
     x -= 1800;
@@ -67,7 +67,7 @@ function removeFromCart3(){
     }
 }
 function removeFromCart4(){
-    if (x == 0){
+    if (g4 == 0){
     }
     else {
     x -= 2400;
