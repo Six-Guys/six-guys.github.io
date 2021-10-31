@@ -244,6 +244,11 @@ p {
     text-shadow: 0 0 0.25em #ff015a, 0 0 0.25em whitesmoke;
 }
 
+.minus {
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
 .atc:hover {
     color: #ff015a;
     text-shadow: 0 0 1em #ff015a;

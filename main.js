@@ -90,7 +90,10 @@ function removeFromCart4(){
 }
 
 function update() {
-    document.getElementsByClassName("pricec1").innerHTML = x1;
+    document.getElementsByClassName("quanc1").innerHTML = g1 + 'x';
+    document.getElementsByClassName("pricec2").innerHTML = x2;
+    document.getElementsByClassName("pricec3").innerHTML = x3;
+    document.getElementsByClassName("pricec4").innerHTML = x4;
 }
 
 
