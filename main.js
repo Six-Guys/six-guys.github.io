@@ -90,11 +90,16 @@ function removeFromCart4(){
 }
 
 function update() {
-    document.getElementsByClassName("quanc1").innerHTML = g1 + 'x';
-    document.getElementsByClassName("pricec2").innerHTML = x2;
-    document.getElementsByClassName("pricec3").innerHTML = x3;
-    document.getElementsByClassName("pricec4").innerHTML = x4;
+    localStorage.setItem('p1', x1);
+    localStorage.setItem('p2', x2);
+    localStorage.setItem('p3', x3);
+    localStorage.setItem('p4', x4);
+    localStorage.setItem('c1', g1);
+    localStorage.setItem('c2', g2);
+    localStorage.setItem('c3', g3);
+    localStorage.setItem('c4', g4);
 }
+
 
 
 // Checkout page

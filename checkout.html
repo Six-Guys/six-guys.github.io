@@ -112,30 +112,33 @@
         <section class="profile-section" id="profile-section">
           <span><i class="fa fa-house"></i></span>
           <h1 class="cc">Cart</h1>
-          <div class="cartreview">
-            <div class="eye1">
+          <div id='cartreview' class="cartreview">
+            <div id='eye1' class="eye1">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh Base</b></h4>
-              <p class="quanc1">Quantity: 0x</p>
-              <p class="pricec1">800$</p>
+              <p id="quanc1" class="quanc1">Quantity: 0x</p>
+              <p id="pricec1" class="pricec1">800$</p>
             </div>
-            <div class="eye2">
+            <div id='eye2' class="eye2">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh</b></h4>
-              <p class="quanc2">Quantity: 0x</p>
-              <p class="pricec2">1200$</p>
+              <p id="quanc2" class="quanc2">Quantity: 0x</p>
+              <p id="pricec2" class="pricec2">1200$</p>
             </div>
-            <div class="eye3">
+            <div id='eye3' class="eye3">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh Premium</b></h4>
-              <p class="quanc3">Quantity: 0x</p>
-              <p class="pricec3">1800$</p>              
+              <p id="quanc3" class="quanc3">Quantity: 0x</p>
+              <p id="pricec3" class="pricec3">1800$</p>              
             </div>
-            <div class="eye4">
+            <div id='eye4' class="eye4">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh Ultimate</b></h4>
-              <p class="quanc4">Quantity: 0x</p>
-              <p class="pricec4">2400$</p>              
+              <p id="quanc4" class="quanc4">Quantity: 0x</p>
+              <p id="pricec4" class="pricec4">2400$</p>              
+            </div>
+            <div id='ec' class='ec'>
+              <h1 class="cc"></h1>
             </div>
           </div>
         </section>
@@ -157,6 +160,39 @@
       </div>
     </div>
 
+<script>
+  var p11 = localStorage.getItem('p1');
+  var p21 = localStorage.getItem('p2');
+  var p31 = localStorage.getItem('p3');
+  var p41 = localStorage.getItem('p4');
+  var c11 = localStorage.getItem('c1');
+  var c21 = localStorage.getItem('c2');
+  var c31 = localStorage.getItem('c3');
+  var c41 = localStorage.getItem('c4');
 
+  if (c11==0){
+    document.getElementById('eye1').remove();
+  }
+  if (c21==0){
+    document.getElementById('eye2').remove();
+  }
+  if (c31==0){
+    document.getElementById('eye3').remove();
+  }
+  if (c41==0){
+    document.getElementById('eye4').remove();
+  }
+
+
+  document.getElementById('pricec1').innerHTML = p11 +"$";
+  document.getElementById('pricec2').innerHTML = p21 +"$";
+  document.getElementById('pricec3').innerHTML = p31 +"$";
+  document.getElementById('pricec4').innerHTML = p41 +"$";
+  document.getElementById('quanc1').innerHTML = "Quantity: " + c11 +"x";
+  document.getElementById('quanc2').innerHTML = "Quantity: " + c21 +"x";
+  document.getElementById('quanc3').innerHTML = "Quantity: " + c31 +"x";
+  document.getElementById('quanc4').innerHTML = "Quantity: " + c41 +"x";
+
+</script>
 </body>
 </html>
