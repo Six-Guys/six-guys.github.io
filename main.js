@@ -16,6 +16,7 @@ var g1 = 0;
 var g2 = 0;
 var g3 = 0;
 var g4 = 0;
+
 function addToCart1(){
     x += 800;
     x1 += 800;
@@ -98,6 +99,8 @@ function update() {
     localStorage.setItem('c2', g2);
     localStorage.setItem('c3', g3);
     localStorage.setItem('c4', g4);
+    localStorage.setItem('c4', g4);
+    
 }
 
 

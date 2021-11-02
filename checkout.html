@@ -111,7 +111,7 @@
       <div class="contentc">
         <section class="profile-section" id="profile-section">
           <span><i class="fa fa-house"></i></span>
-          <h1 class="cc">Cart</h1>
+          <h1 id="cc" class="cc">Cart</h1>
           <div id='cartreview' class="cartreview">
             <div id='eye1' class="eye1">
               <img src="images/glasses.jpg" alt="Glasses">
@@ -137,8 +137,8 @@
               <p id="quanc4" class="quanc4">Quantity: 0x</p>
               <p id="pricec4" class="pricec4">2400$</p>              
             </div>
-            <div id='ec' class='ec'>
-              <h1 class="cc"></h1>
+            <div>
+              <h1 id='ec' class="ec">EMPTY CART</h1>
             </div>
           </div>
         </section>
@@ -161,38 +161,49 @@
     </div>
 
 <script>
-  var p11 = localStorage.getItem('p1');
-  var p21 = localStorage.getItem('p2');
-  var p31 = localStorage.getItem('p3');
-  var p41 = localStorage.getItem('p4');
-  var c11 = localStorage.getItem('c1');
-  var c21 = localStorage.getItem('c2');
-  var c31 = localStorage.getItem('c3');
-  var c41 = localStorage.getItem('c4');
+  var p1 = localStorage.getItem('p1');
+  var p2 = localStorage.getItem('p2');
+  var p3 = localStorage.getItem('p3');
+  var p4 = localStorage.getItem('p4');
+  var c1 = localStorage.getItem('c1');
+  var c2 = localStorage.getItem('c2');
+  var c3 = localStorage.getItem('c3');
+  var c4 = localStorage.getItem('c4');
 
-  if (c11==0){
+  if (c1==0){
     document.getElementById('eye1').remove();
   }
-  if (c21==0){
+  else {
+    document.getElementById('pricec1').innerHTML = p1 +"$";
+    document.getElementById('quanc1').innerHTML = "Quantity: " + c1 +"x";
+  }
+  if (c2==0){
     document.getElementById('eye2').remove();
   }
-  if (c31==0){
+  else {
+    document.getElementById('pricec2').innerHTML = p2 +"$";
+    document.getElementById('quanc2').innerHTML = "Quantity: " + c2 +"x";
+  }
+  if (c3==0){
     document.getElementById('eye3').remove();
   }
-  if (c41==0){
+  else {
+    document.getElementById('pricec3').innerHTML = p3 +"$";
+    document.getElementById('quanc3').innerHTML = "Quantity: " + c3 +"x";
+  }
+  if (c4==0){
     document.getElementById('eye4').remove();
   }
+  else {
+    document.getElementById('pricec4').innerHTML = p4 +"$";
+    document.getElementById('quanc4').innerHTML = "Quantity: " + c4 +"x";
+  }
+  if (c1==0 & c2==0 & c3==0 & c4==0 ) {
+    document.getElementById("cc").style.display = 'none';
+    document.getElementById('ec').style.display = 'block';
+  }
 
-
-  document.getElementById('pricec1').innerHTML = p11 +"$";
-  document.getElementById('pricec2').innerHTML = p21 +"$";
-  document.getElementById('pricec3').innerHTML = p31 +"$";
-  document.getElementById('pricec4').innerHTML = p41 +"$";
-  document.getElementById('quanc1').innerHTML = "Quantity: " + c11 +"x";
-  document.getElementById('quanc2').innerHTML = "Quantity: " + c21 +"x";
-  document.getElementById('quanc3').innerHTML = "Quantity: " + c31 +"x";
-  document.getElementById('quanc4').innerHTML = "Quantity: " + c41 +"x";
-
+  
 </script>
 </body>
 </html>

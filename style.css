@@ -528,3 +528,14 @@ ul.navc li.active::after {
     padding-left: 5px;
     padding-top: 20px;
 }
+
+.ec {
+    display: none;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'orbitronlight', Arial, sans-serif;
+    font-size: 3em;
+    color: #fff;
+}
