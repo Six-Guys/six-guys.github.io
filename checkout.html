@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Checkout</title>
     <script type="text/javascript" src=main.js></script>>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=API_KEY"></script>
     <link rel="stylesheet" href="style.css">
     <style>
 
@@ -13,9 +14,12 @@
       box-sizing: border-box;
       }
       
-      input {
-          display: none;
-          position: absolute;
+      input[type=text] {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
       }
     
       .head {
@@ -85,23 +89,23 @@
 </head>
 <body class="checkc">
     <div class="containerc">
-      <input type="radio" class = "profile" checked id ="profile" >
-      <input type="radio" class = "settings" id ="settings" >
-      <input type="radio" class = "posts" id ="posts" >
-      <input type="radio" class = "books" id ="books" >
+      <input type="radio" class = "profile" checked id ="profile" hidden>
+      <input type="radio" class = "settings" id ="settings" hidden>
+      <input type="radio" class = "posts" id ="posts" hidden>
+      <input type="radio" class = "books" id ="books" hidden>
       <div class="head">
         <ul class="navc">
           <li class="st st1 active" id="1" onclick="page1()">
-            <h2 class="inner">Profile</h2>
+            <h2 class="inner">Cart</h2>
           </li>
           <li class="st st2" id="2" onclick="page2()">
-            <h2 class="inner">Account</h2>
+            <h2 class="inner">Payment</h2>
           </li>
           <li class="st st3" id="3" onclick="page3()">
-            <h2 class="inner">Posts</h2>
+            <h2 class="inner">Shipping</h2>
           </li>
           <li class="st st4" id="4" onclick="page4()">
-            <h2 class="inner">Advanced</h2>
+            <h2 class="inner">Purchase</h2>
           </li>
         </ul>
         <div class="linec">
@@ -141,21 +145,121 @@
               <h1 id='ec' class="ec">EMPTY CART</h1>
             </div>
           </div>
+          <input value="Continue to Payment Method" class="btnc" onclick="page2()">
         </section>
         <section class="account-section" id="account-section">
           <span><i class="fa fa-user"></i></span>
-          <h1 class="cc">Checkout</h1>
-          <p> Display credit card form</p>
+          <h1 class="cc" style='font-size: 40px;'>Address and Payment</h1>
+          <div class="row">
+            <div class="col-75">
+              <div class="containerf">
+                <form action="/action_page.php">
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Info</h3>
+                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input type="text" id="email" name="email" placeholder="john@example.com">
+                    </div>
+          
+                    <div class="col-50">
+                      <h3>Payment</h3>
+                      <label for="fname"></label>
+                      <label for="cname">Name on Card</label>
+                      <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                      <label for="ccnum">Credit card number</label>
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                      <label for="expmonth">Exp Month</label>
+                      <input type="text" id="expmonth" name="expmonth" placeholder="September">
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="expyear">Exp Year</label>
+                          <input type="text" id="expyear" name="expyear" placeholder="2018">
+                        </div>
+                        <div class="col-50">
+                          <label for="cvv">CVV</label>
+                          <input type="text" id="cvv" name="cvv" placeholder="352">
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                  <input value="Continue to shipping" class="btnc" onclick="page3()">
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="post-section" id="post-section">
           <span><i class="fa fa-edit"></i></span>
-          <h1 class="cc">Post section</h1>
-          <p> Enter text here</p>
+          <h1 class="cc">Shipping</h1>
+          <div class="rowc">
+            <div class="col-75c">
+              <div class="containerf">
+                <form action="/action_page.php">
+          
+                  <div class="rowc">
+                    <div class="col-50c">
+                      <h3>Shipping Address</h3>
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                      <input type="text" id="city" name="city" placeholder="New York">
+                      <div class="row">
+                        <div class="col-50c">
+                          <label for="state">State</label>
+                          <input type="text" id="state" name="state" placeholder="NY">
+                        </div>
+                        <div class="col-50c">
+                          <label for="zip">Zip</label>
+                          <input type="text" id="zip" name="zip/postal" placeholder="10001/M1J4Y5">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <input value="Continue to Confirm" class="btnc">
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="advanced-section" id="advanced-section">
           <span><i class="fa fa-cog"></i></span>
           <h1 class="cc">Confirm order</h1>
-          <p> Last review before confirming the order</p>
+          <div class="row">
+            <div class="col-75">            
+              <div class="col-50c">
+              <div class="containerf">
+                  <h4>Cart
+                    <span class="price3" style="color:black">
+                      <i class="fa fa-shopping-cart"></i>
+                      <b>4</b>
+                    </span>
+                  </h4>
+                  <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                  <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                  <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                  <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                  <hr>
+                  <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                </div>
+              </div>
+              <div class="containerf">
+                <form action="/action_page.php">
+          
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Items</h3>
+                    </div>
+          
+                  </div>
+                  <input type="submit" value="Continue to checkout" class="btnc">
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -203,7 +307,6 @@
     document.getElementById('ec').style.display = 'block';
   }
 
-  
 </script>
 </body>
 </html>

@@ -55,7 +55,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ff015a;
+    color: #fff;
 }
 
 .product-image {
@@ -326,7 +326,7 @@ p {
 }
 
 
-/*---------- Checkout page ---------*/
+/*---------- Checkout page 1 ---------*/
 
 .containerc {
     margin: 30px auto;
@@ -539,3 +539,88 @@ ul.navc li.active::after {
     font-size: 3em;
     color: #fff;
 }
+
+/*---------- Checkout page 2 3 and 4 ---------*/
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .containerf {
+    background: #ff015a;
+    padding: 50px 20px 50px 30px;
+    border: 1px solid #ff015a;
+    box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
+    border-radius: 6px;
+  }
+  
+  .btnc {  
+    display: flex;
+    width:50%; 
+    height: 50px;
+    margin:auto;  
+    margin-top: 3px; 
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 10px;
+    letter-spacing: 2px; 
+    cursor: pointer;
+
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'orbitronlight';
+    color: white;    
+    border: #2b284b 2px solid;
+    text-shadow: 0 0 0.25em #2b284b;
+    box-shadow: 0 0 1em 0 #393566, inset  0 0 1em 0 #393566;
+    background-color: transparent;
+  }
+  
+  .btnc:hover {
+    color: #fff;
+    text-shadow: 0 0 1em #393566;
+    box-shadow: 0 0 2em 0 #393566, inset  0 0 2em 0 #393566;
+  }
+  
+  span.price3 {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+      }
+  }
