@@ -504,6 +504,9 @@ ul.navc li.active::after {
 .eye4 img {
     width: 100px;
     height: 100px;
+    border-radius: 30px;
+    border: #210964 2px solid;
+    box-shadow: 0 0 2em 0 #2b284b, inset  0 0 2em 0 #2b284b;
 }
 
 .pricec1,
@@ -529,7 +532,8 @@ ul.navc li.active::after {
     padding-top: 20px;
 }
 
-.ec {
+.ec1{
+    
     display: none;
     font-weight: 900;
     text-align: center;
@@ -538,7 +542,37 @@ ul.navc li.active::after {
     font-family: 'orbitronlight', Arial, sans-serif;
     font-size: 3em;
     color: #fff;
+    text-decoration: none;
 }
+
+.purchase1 {
+    display: none;
+    width: fit-content; 
+    margin: auto;  
+    margin-top: 20px; 
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    letter-spacing: 4px; 
+    font-weight: 600;  
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+    font-family: 'orbitronlight';
+    color: #210964;    
+    border: #210964 4px solid;
+    text-shadow: 0 0 0.25em #2b284b;
+    box-shadow: 0 0 1em 0 #2b284b, inset  0 0 1em 0 #2b284b;
+}
+
+.purchase1:hover {
+    color: #2b284b;
+    text-shadow: 0 0 1em #2b284b;
+    box-shadow: 0 0 2em 0 #2b284b, inset  0 0 2em 0 #2b284b;
+}
+
 
 /*---------- Checkout page 2 3 and 4 ---------*/
 
@@ -580,16 +614,13 @@ ul.navc li.active::after {
   }
   
   .btnc {  
-    display: flex;
-    width:50%; 
-    height: 50px;
+    display:flex;
+    width:fit-content; 
     margin:auto;  
     margin-top: 3px; 
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
+    text-align: center;
+    padding: 10px;
     border-radius: 10px;
-    letter-spacing: 2px; 
     cursor: pointer;
 
     font-size: 17px;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
-    <script type="text/javascript" src=main.js></script>>
+    <script type="text/javascript" src=main.js></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=API_KEY"></script>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -85,7 +85,7 @@
         }
       }
     </style>
-    <a href = "index.html"><img src = "images/logo.png" width = "40" height = "40" float="left"></a>
+    <a href="index.html"><img src="images/logo.png" width="40" height="40" float="left"></a>
 </head>
 <body class="checkc">
     <div class="containerc">
@@ -141,11 +141,14 @@
               <p id="quanc4" class="quanc4">Quantity: 0x</p>
               <p id="pricec4" class="pricec4">2400$</p>              
             </div>
-            <div>
-              <h1 id='ec' class="ec">EMPTY CART</h1>
-            </div>
+              <h1 id='ec' class="ec1">EMPTY CART</h1>
+              <a href="pricing.html" id="ec2" class='purchase1'>
+                Return to Item select
+              </a>
           </div>
-          <input value="Continue to Payment Method" class="btnc" onclick="page2()">
+          <div id="purchsbtn">
+            <input value="Continue to Payment" class="btnc" onclick="page2()">
+          </div>
         </section>
         <section class="account-section" id="account-section">
           <span><i class="fa fa-user"></i></span>
@@ -219,7 +222,7 @@
                       </div>
                     </div>
                   </div>
-                  <input value="Continue to Confirm" class="btnc">
+                  <input value="Continue to Confirm" class="btnc" onclick="page4()">
                 </form>
               </div>
             </div>
@@ -305,6 +308,8 @@
   if (c1==0 & c2==0 & c3==0 & c4==0 ) {
     document.getElementById("cc").style.display = 'none';
     document.getElementById('ec').style.display = 'block';
+    document.getElementById('ec2').style.display = 'block';
+    document.getElementById('purchsbtn').style.display = 'none';
   }
 
 </script>
