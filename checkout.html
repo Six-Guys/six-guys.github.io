@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Checkout</title>
     <script type="text/javascript" src=main.js></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=API_KEY"></script>
     <link rel="stylesheet" href="style.css">
     <style>
 
@@ -49,7 +48,7 @@
       }
 
       section p {
-        padding: 30px 40px;
+        padding: 30px 0px;
         text-align: center;
         font-weight: bolder;
         font-size: 13px;
@@ -157,11 +156,11 @@
             <div class="col-75">
               <div class="containerf">
                 <form action="/action_page.php">
-                  <div class="row">
+                  <div class="row" id='form1'>
                     <div class="col-50">
                       <h3>Info</h3>
                       <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe" >
                       <label for="email"><i class="fa fa-envelope"></i> Email</label>
                       <input type="text" id="email" name="email" placeholder="john@example.com">
                     </div>
@@ -189,7 +188,10 @@
                     </div>
           
                   </div>
-                  <input value="Continue to shipping" class="btnc" onclick="page3()">
+                  <div class='btncon'>
+                    <input value="Return to overview" class="btnc" onclick="page1()">
+                    <input value="Continue to shipping" class="btnc" onclick="page3()">
+                  </div>
                 </form>
               </div>
             </div>
@@ -202,27 +204,38 @@
             <div class="col-75c">
               <div class="containerf">
                 <form action="/action_page.php">
-          
-                  <div class="rowc">
-                    <div class="col-50c">
+                  <div class="rowc2">
+                    <div class="col-50c" id="preshipping">
                       <h3>Shipping Address</h3>
                       <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
                       <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
                       <label for="city"><i class="fa fa-institution"></i> City</label>
                       <input type="text" id="city" name="city" placeholder="New York">
-                      <div class="row">
-                        <div class="col-50c">
-                          <label for="state">State</label>
-                          <input type="text" id="state" name="state" placeholder="NY">
-                        </div>
-                        <div class="col-50c">
-                          <label for="zip">Zip</label>
-                          <input type="text" id="zip" name="zip/postal" placeholder="10001/M1J4Y5">
-                        </div>
-                      </div>
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="NY">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip/postal" placeholder="10001/M1J4Y5">
                     </div>
+                    <div class="col-50c" id="shippage" hidden>
+                      <form id='shipform'>
+                        <h3>Select a shipping method</h3>
+                        <input type='radio' id="standard" name='standard1' class="shipopt" value='standard'>
+                        <label for='standard1' >Standard Shipping (7-14 buisness days)</label><br>
+                        <input type='radio' id="express" name='express1' class="shipopt" value='express'>
+                        <label for='express1' >Express Shipping (5-7 buisness days)</label><br>
+                        <input type='radio' id="2day" name='2day1' class="shipopt" value='2day'>
+                        <label for='2day1' >Two day shipping (or less)</label><br>
+                      </form>
+                    </div>
+                  </div>                    
+                  <div id="preshippagebut">
+                    <input value="Return to info" class="btnc" onclick="page2()">
+                    <input value="Continue" class="btnc" onclick="page35()">
                   </div>
-                  <input value="Continue to Confirm" class="btnc" onclick="page4()">
+                  <div id="shippagebut" hidden>
+                    <input value="Return to info" class="btnc" onclick="pagepre35()">
+                    <input value="Continue to Confirm" class="btnc" onclick="page4()">
+                  </div>
                 </form>
               </div>
             </div>
@@ -230,38 +243,38 @@
         </section>
         <section class="advanced-section" id="advanced-section">
           <span><i class="fa fa-cog"></i></span>
-          <h1 class="cc">Confirm order</h1>
-          <div class="row">
-            <div class="col-75">            
-              <div class="col-50c">
-              <div class="containerf">
-                  <h4>Cart
-                    <span class="price3" style="color:black">
-                      <i class="fa fa-shopping-cart"></i>
-                      <b>4</b>
-                    </span>
-                  </h4>
-                  <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                  <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                  <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                  <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-                  <hr>
-                  <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-                </div>
-              </div>
-              <div class="containerf">
-                <form action="/action_page.php">
-          
-                  <div class="row">
-                    <div class="col-50">
-                      <h3>Items</h3>
-                    </div>
-          
-                  </div>
-                  <input type="submit" value="Continue to checkout" class="btnc">
-                </form>
-              </div>
+          <h1 id='cc1' class="cc">Confirm order</h1>           
+          <div id='cartreview' class="cartreview">
+            <div id='eye1' class="eye1">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4 class="titlec"><b>Eyeroh Base</b></h4>
+              <p id="quanc1" class="quanc1">Quantity: 0x</p>
+              <p id="pricec1" class="pricec1">800$</p>
             </div>
+            <div id='eye2' class="eye2">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4 class="titlec"><b>Eyeroh</b></h4>
+              <p id="quanc2" class="quanc2">Quantity: 0x</p>
+              <p id="pricec2" class="pricec2">1200$</p>
+            </div>
+            <div id='eye3' class="eye3">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4 class="titlec"><b>Eyeroh Premium</b></h4>
+              <p id="quanc3" class="quanc3">Quantity: 0x</p>
+              <p id="pricec3" class="pricec3">1800$</p>              
+            </div>
+            <div id='eye4' class="eye4">
+              <img src="images/glasses.jpg" alt="Glasses">
+              <h4 class="titlec"><b>Eyeroh Ultimate</b></h4>
+              <p id="quanc4" class="quanc4">Quantity: 0x</p>
+              <p id="pricec4" class="pricec4">2400$</p>              
+            </div>
+            <p></p>
+            <hr>
+            <p>Total <span class="price"><b>$30</b></span></p>
+            <a href='bought.html' style='text-decoration: none;'>
+              <input type="submit" value="Continue to checkout" class="btnc">
+            </a>
           </div>
         </section>
       </div>

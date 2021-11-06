@@ -133,4 +133,19 @@ function page4() {
     document.getElementById("settings").removeAttribute("checked");
     document.getElementById("posts").removeAttribute("checked");
     document.getElementById("books").setAttribute("checked", true);
-};
+}
+
+function page35() {
+    document.getElementById("preshippagebut").hidden= true;
+    document.getElementById("shippagebut").hidden= false;
+    document.getElementById("shippage").hidden = false;
+    document.getElementById("preshipping").hidden = true;
+
+}
+
+function pagepre35() {
+    document.getElementById("preshippagebut").hidden= false;
+    document.getElementById("shippagebut").hidden= true;
+    document.getElementById("shippage").hidden = true;
+    document.getElementById("preshipping").hidden = false;
+}

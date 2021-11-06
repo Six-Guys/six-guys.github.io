@@ -576,14 +576,18 @@ ul.navc li.active::after {
 
 /*---------- Checkout page 2 3 and 4 ---------*/
 
-.row {
+  .row {
     display: -ms-flexbox; /* IE10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     margin: 0 -16px;
   }
-  
+  .rowc2 {
+    display: flex;
+    margin: auto;
+    max-width: 75%;
+  }
   .col-25 {
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
@@ -599,6 +603,14 @@ ul.navc li.active::after {
     flex: 75%;
   }
   
+.shipopt {
+    text-align: center;
+    font-family: 'Montserrat' , Arial, sans-serif;
+    font-size: 1em;
+    color: #fff;
+    margin-top: 15px;
+}
+
   .col-25,
   .col-50,
   .col-75 {
@@ -611,19 +623,21 @@ ul.navc li.active::after {
     border: 1px solid #ff015a;
     box-shadow: 0 0 1em 0 #ff015a, inset  0 0 1em 0 #ff015a;
     border-radius: 6px;
+    max-width: 100%;
   }
   
   .btnc {  
-    display:flex;
-    width:fit-content; 
-    margin:auto;  
-    margin-top: 3px; 
+    display: flex;
+    width:fit-content;
+    margin: auto;  
+    margin-top: 15px; 
     text-align: center;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    max-width: 100%;
 
-    font-size: 17px;
+    font-size: 1.5vw ;
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.3s;
@@ -635,6 +649,13 @@ ul.navc li.active::after {
     background-color: transparent;
   }
   
+  .btncon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .btnc:hover {
     color: #fff;
     text-shadow: 0 0 1em #393566;
