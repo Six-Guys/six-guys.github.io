@@ -317,7 +317,6 @@ p {
 .title h2 {
 
     font-family: 'orbitronlight'
-    
 }
 
 .Bcolor {
@@ -325,6 +324,30 @@ p {
     border-color: #ff015a;
 }
 
+.Model1 {
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 30px;
+}
+
+.Model1s {
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+hr.solid {
+    color: #ff015a
+}
+
+.title_features h1 {
+    padding-top: 100px; 
+    font-size: 75px;
+    color: #ff015a;
+}
+
+.solid {
+    background-color: #DE004E;
+}
 
 /*---------- Checkout page 1 ---------*/
 
