@@ -91,6 +91,7 @@ function removeFromCart4(){
 }
 
 function update() {
+    localStorage.setItem('p', x);
     localStorage.setItem('p1', x1);
     localStorage.setItem('p2', x2);
     localStorage.setItem('p3', x3);
@@ -148,4 +149,17 @@ function pagepre35() {
     document.getElementById("shippagebut").hidden= true;
     document.getElementById("shippage").hidden = true;
     document.getElementById("preshipping").hidden = false;
+}
+
+
+function Dosubmit() {
+    page4();
+}
+
+function Dosubmit1() {
+    page35();
+}
+
+function Dosubmit2() {
+    page3();
 }

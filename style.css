@@ -699,3 +699,17 @@ ul.navc li.active::after {
         margin-bottom: 20px;
       }
   }
+
+  .pricingfinal {
+    padding: 30px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 13px;
+  }
+  
+  .subtot,
+  .taxtot,
+  .pricetot {
+    font-size: 3vw;
+    padding: 30px;
+  }

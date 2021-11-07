@@ -41,19 +41,6 @@
         
       }
 
-      section span {
-        font-size: 3rem;
-        display: flex;
-        justify-content: center;
-      }
-
-      section p {
-        padding: 30px 0px;
-        text-align: center;
-        font-weight: bolder;
-        font-size: 13px;
-      }
-
       @keyframes anim {
         0% {
           opacity: 0;
@@ -94,16 +81,16 @@
       <input type="radio" class = "books" id ="books" hidden>
       <div class="head">
         <ul class="navc">
-          <li class="st st1 active" id="1" onclick="page1()">
+          <li class="st st1 active" id="1">
             <h2 class="inner">Cart</h2>
           </li>
-          <li class="st st2" id="2" onclick="page2()">
+          <li class="st st2" id="2">
             <h2 class="inner">Payment</h2>
           </li>
-          <li class="st st3" id="3" onclick="page3()">
+          <li class="st st3" id="3">
             <h2 class="inner">Shipping</h2>
           </li>
-          <li class="st st4" id="4" onclick="page4()">
+          <li class="st st4" id="4">
             <h2 class="inner">Purchase</h2>
           </li>
         </ul>
@@ -155,34 +142,34 @@
           <div class="row">
             <div class="col-75">
               <div class="containerf">
-                <form action="/action_page.php">
+                <form onsubmit="Dosubmit2();return false">
                   <div class="row" id='form1'>
                     <div class="col-50">
                       <h3>Info</h3>
                       <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe" >
+                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
                       <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                      <input type="text" id="email" name="email" placeholder="john@example.com">
+                      <input type="text" id="email" name="email" placeholder="john@example.com" required>
                     </div>
           
                     <div class="col-50">
                       <h3>Payment</h3>
                       <label for="fname"></label>
                       <label for="cname">Name on Card</label>
-                      <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                      <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
                       <label for="ccnum">Credit card number</label>
-                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
                       <label for="expmonth">Exp Month</label>
-                      <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                      <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
           
                       <div class="row">
                         <div class="col-50">
                           <label for="expyear">Exp Year</label>
-                          <input type="text" id="expyear" name="expyear" placeholder="2018">
+                          <input type="text" id="expyear" name="expyear" placeholder="2018" required>
                         </div>
                         <div class="col-50">
                           <label for="cvv">CVV</label>
-                          <input type="text" id="cvv" name="cvv" placeholder="352">
+                          <input type="text" id="cvv" name="cvv" placeholder="###" required>
                         </div>
                       </div>
                     </div>
@@ -190,7 +177,7 @@
                   </div>
                   <div class='btncon'>
                     <input value="Return to overview" class="btnc" onclick="page1()">
-                    <input value="Continue to shipping" class="btnc" onclick="page3()">
+                    <input value="Continue to shipping" class="btnc" type='submit' onclick="reload()">
                   </div>
                 </form>
               </div>
@@ -203,40 +190,36 @@
           <div class="rowc">
             <div class="col-75c">
               <div class="containerf">
-                <form action="/action_page.php">
-                  <div class="rowc2">
-                    <div class="col-50c" id="preshipping">
-                      <h3>Shipping Address</h3>
+                <div class="rowc2">
+                  <div class="col-50c" id="preshipping">
+                    <h3>Shipping Address</h3>
+                    <form name='formship' onsubmit="Dosubmit1();return false">
                       <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
                       <label for="city"><i class="fa fa-institution"></i> City</label>
-                      <input type="text" id="city" name="city" placeholder="New York">
+                      <input type="text" id="city" name="city" placeholder="New York" required>
                       <label for="state">State</label>
-                      <input type="text" id="state" name="state" placeholder="NY">
+                      <input type="text" id="state" name="state" placeholder="NY" required>
                       <label for="zip">Zip</label>
-                      <input type="text" id="zip" name="zip/postal" placeholder="10001/M1J4Y5">
-                    </div>
-                    <div class="col-50c" id="shippage" hidden>
-                      <form id='shipform'>
-                        <h3>Select a shipping method</h3>
-                        <input type='radio' id="standard" name='standard1' class="shipopt" value='standard'>
-                        <label for='standard1' >Standard Shipping (7-14 buisness days)</label><br>
-                        <input type='radio' id="express" name='express1' class="shipopt" value='express'>
-                        <label for='express1' >Express Shipping (5-7 buisness days)</label><br>
-                        <input type='radio' id="2day" name='2day1' class="shipopt" value='2day'>
-                        <label for='2day1' >Two day shipping (or less)</label><br>
-                      </form>
-                    </div>
-                  </div>                    
-                  <div id="preshippagebut">
-                    <input value="Return to info" class="btnc" onclick="page2()">
-                    <input value="Continue" class="btnc" onclick="page35()">
+                      <input type="text" id="zip" name="zip/postal" placeholder="10001/M1J4Y5" required>
+                      <div id="preshippagebut">
+                        <input value="Return to info" class="btnc" onclick="page2()">
+                        <input value="Continue" class="btnc" type='submit'>
+                      </div>
+                    </form>
                   </div>
-                  <div id="shippagebut" hidden>
-                    <input value="Return to info" class="btnc" onclick="pagepre35()">
-                    <input value="Continue to Confirm" class="btnc" onclick="page4()">
+                  <div class="col-50c" id="shippage" hidden>
+                    <form id='shipform' onsubmit='Dosubmit();return false'>
+                      <h3>Select a shipping method</h3>
+                      <input type='radio' id="standard" name='standard1' class="shipopt" required>
+                      <label for='standard1' > Due to current production status, shipping is to be expected in 6 months.</label><br>
+                      <div id="shippagebut" hidden>
+                        <input value="Return to info" class="btnc" onclick="pagepre35()">
+                        <input value="Continue to Confirm" class="btnc" type='submit'>
+                      </div>
+                    </form>
                   </div>
-                </form>
+                </div>                    
               </div>
             </div>
           </div>
@@ -245,33 +228,36 @@
           <span><i class="fa fa-cog"></i></span>
           <h1 id='cc1' class="cc">Confirm order</h1>           
           <div id='cartreview' class="cartreview">
-            <div id='eye1' class="eye1">
+            <div id='eye11' class="eye1">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh Base</b></h4>
-              <p id="quanc1" class="quanc1">Quantity: 0x</p>
-              <p id="pricec1" class="pricec1">800$</p>
+              <p id="quanc11" class="quanc1">Quantity: 0x</p>
+              <p id="pricec11" class="pricec1">800$</p>
             </div>
-            <div id='eye2' class="eye2">
+            <div id='eye21' class="eye2">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh</b></h4>
-              <p id="quanc2" class="quanc2">Quantity: 0x</p>
-              <p id="pricec2" class="pricec2">1200$</p>
+              <p id="quanc21" class="quanc2">Quantity: 0x</p>
+              <p id="pricec21" class="pricec2">1200$</p>
             </div>
-            <div id='eye3' class="eye3">
+            <div id='eye31' class="eye3">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh Premium</b></h4>
-              <p id="quanc3" class="quanc3">Quantity: 0x</p>
-              <p id="pricec3" class="pricec3">1800$</p>              
+              <p id="quanc31" class="quanc3">Quantity: 0x</p>
+              <p id="pricec31" class="pricec3">1800$</p>              
             </div>
-            <div id='eye4' class="eye4">
+            <div id='eye41' class="eye4">
               <img src="images/glasses.jpg" alt="Glasses">
               <h4 class="titlec"><b>Eyeroh Ultimate</b></h4>
-              <p id="quanc4" class="quanc4">Quantity: 0x</p>
-              <p id="pricec4" class="pricec4">2400$</p>              
+              <p id="quanc41" class="quanc4">Quantity: 0x</p>
+              <p id="pricec41" class="pricec4">2400$</p>              
             </div>
-            <p></p>
-            <hr>
-            <p>Total <span class="price"><b>$30</b></span></p>
+            <hr style="margin-top: 20px;">
+            <div class='pricingfinal'>
+              <p>Sub-Total<b class='subtot' id='subtot'>$30</b></p>
+              <p style="margin-top: 20px;">Tax<b class='taxtot' id='taxtot'>$30</b></span></p>
+              <p style="margin-top: 20px;">Total<b class='pricetot' id='pricetot'>$30</b></p>
+            </div>
             <a href='bought.html' style='text-decoration: none;'>
               <input type="submit" value="Continue to checkout" class="btnc">
             </a>
@@ -281,6 +267,7 @@
     </div>
 
 <script>
+  var p = localStorage.getItem('p');
   var p1 = localStorage.getItem('p1');
   var p2 = localStorage.getItem('p2');
   var p3 = localStorage.getItem('p3');
@@ -292,31 +279,43 @@
 
   if (c1==0){
     document.getElementById('eye1').remove();
+    document.getElementById('eye11').remove();
   }
   else {
     document.getElementById('pricec1').innerHTML = p1 +"$";
     document.getElementById('quanc1').innerHTML = "Quantity: " + c1 +"x";
+    document.getElementById('pricec11').innerHTML = p1 +"$";
+    document.getElementById('quanc11').innerHTML = "Quantity: " + c1 +"x";
   }
   if (c2==0){
     document.getElementById('eye2').remove();
+    document.getElementById('eye21').remove();
   }
   else {
     document.getElementById('pricec2').innerHTML = p2 +"$";
     document.getElementById('quanc2').innerHTML = "Quantity: " + c2 +"x";
+    document.getElementById('pricec21').innerHTML = p2 +"$";
+    document.getElementById('quanc21').innerHTML = "Quantity: " + c2 +"x";
   }
   if (c3==0){
     document.getElementById('eye3').remove();
+    document.getElementById('eye31').remove();
   }
   else {
     document.getElementById('pricec3').innerHTML = p3 +"$";
     document.getElementById('quanc3').innerHTML = "Quantity: " + c3 +"x";
+    document.getElementById('pricec31').innerHTML = p3 +"$";
+    document.getElementById('quanc31').innerHTML = "Quantity: " + c3 +"x";
   }
   if (c4==0){
     document.getElementById('eye4').remove();
+    document.getElementById('eye41').remove();
   }
   else {
     document.getElementById('pricec4').innerHTML = p4 +"$";
     document.getElementById('quanc4').innerHTML = "Quantity: " + c4 +"x";
+    document.getElementById('pricec41').innerHTML = p4 +"$";
+    document.getElementById('quanc41').innerHTML = "Quantity: " + c4 +"x";
   }
   if (c1==0 & c2==0 & c3==0 & c4==0 ) {
     document.getElementById("cc").style.display = 'none';
@@ -324,6 +323,12 @@
     document.getElementById('ec2').style.display = 'block';
     document.getElementById('purchsbtn').style.display = 'none';
   }
+  
+  t = (p*0.13).toFixed(2);
+  pt = (p * 1.13).toFixed(2);
+  document.getElementById('subtot').innerHTML = p + '$';
+  document.getElementById('taxtot').innerHTML = t + '$';
+  document.getElementById('pricetot').innerHTML = pt + '$';
 
 </script>
 </body>
