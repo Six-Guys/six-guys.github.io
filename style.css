@@ -176,6 +176,7 @@ p {
     margin-top: 50px;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: #fff;
 }
 
@@ -610,6 +611,7 @@ ul.navc li.active::after {
     display: flex;
     margin: auto;
     max-width: 75%;
+    text-align: center;
   }
   .col-25 {
     -ms-flex: 25%; /* IE10 */
@@ -624,6 +626,11 @@ ul.navc li.active::after {
   .col-75 {
     -ms-flex: 75%; /* IE10 */
     flex: 75%;
+  }
+
+  .col-50c {
+      justify-content: center;
+      text-align: center;
   }
   
 .shipopt {
