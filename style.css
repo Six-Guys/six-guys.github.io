@@ -58,6 +58,14 @@ h3 {
     color: #fff;
 }
 
+h4 {
+    font-family: 'Montserrat' , Arial, sans-serif;
+    font-size:30px;
+    margin:0;
+    color: rgb(255, 107, 176);    
+    text-shadow: 0 0 0.25em #ff0101, 0 0 0.05em whitesmoke;
+}
+
 .product-image {
     display: block;
     width: 50%;
@@ -282,31 +290,31 @@ p {
   }
   
   
-  .left{
-      margin-left: 10px;
-      position: absolute;
-      color: white;
-      text-align: left;
-      font-family: "Montserrat";
-      font-size: 12.5px;
-  }
-   
-  
-  .center{
-      position: absolute;
-      color: white;
-      white-space: pre;
-      font-family: monospace;
-      bottom: 0;
-      left: 32.5%;
-  }
-  
-  
-  .right{
-      color: white;
-      text-align: right;
-      
-  }
+.left{
+    margin-left: 10px;
+    position: absolute;
+    color: white;
+    text-align: left;
+    font-family: "Montserrat";
+    font-size: 12.5px;
+}
+
+
+.center{
+    position: absolute;
+    color: white;
+    white-space: pre;
+    font-family: monospace;
+    bottom: 0;
+    left: 32.5%;
+}
+
+
+.right{
+    color: white;
+    text-align: right;
+    
+}
 
 /*-------- Features Menu --------*/
 .ftable td {
@@ -316,8 +324,7 @@ p {
 }
 
 .title h2 {
-
-    font-family: 'orbitronlight'
+    font-family: 'orbitronlight';
 }
 
 .Bcolor {
@@ -328,6 +335,7 @@ p {
 .Model1 {
     color: #fff;
     font-family: 'Montserrat';
+    text-align:left;
     font-size: 30px;
 }
 
@@ -337,7 +345,7 @@ p {
 }
 
 hr.solid {
-    color: #ff015a
+    color: #ff015a;
 }
 
 .title_features h1 {
